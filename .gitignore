@@ -1,0 +1,10 @@
+# CMake Files
+CMakeCache.txt
+CMakeFiles/*
+cmake_install.cmake	
+
+# Unix Make File Artifacts
+MakeFile
+
+# Build Artifacts
+build/*

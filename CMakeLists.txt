@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.6)
+project (renshi)
+file(GLOB_RECURSE source_files ./ true *.cpp)
+add_executable(renshi ${source_files})
+target_link_libraries (renshi GL)
+target_link_libraries (renshi glut)
