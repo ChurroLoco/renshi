@@ -1,6 +1,10 @@
+#ifdef __APPLE__
+#include "GLUT/glut.h"
+#include "OpenGL/gl.h"
+#else
 #include "GL/freeglut.h"
 #include "GL/gl.h"
-
+#endif
 /* display function - code from:
      http://fly.cc.fer.hr/~unreal/theredbook/chapter01.html
 This is the actual usage of the OpenGL library. 
