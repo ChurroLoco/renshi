@@ -4,3 +4,4 @@ file(GLOB_RECURSE source_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURR
 add_executable(renshi ${source_files})
 target_link_libraries (renshi GL)
 target_link_libraries (renshi glut)
+install(TARGETS renshi DESTINATION ${PROJECT_SOURCE_DIR}/bin)
