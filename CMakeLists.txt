@@ -3,6 +3,9 @@ project (renshi)
 
 # Get a list of source files.  Touch this file if you add more files and have already ran CMake.
 file(GLOB_RECURSE source_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/source/*.h)
+
+include_directories(${PROJECT_SOURCE_DIR}/include/glm)
+
 add_executable(renshi ${source_files})
 
 # Apple needs frameworks instead of standar libs

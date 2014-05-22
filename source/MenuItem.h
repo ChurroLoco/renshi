@@ -4,9 +4,9 @@
 #include <glm/glm.hpp>
 
 using namespace std;
-using namepsace glm;
+using namespace glm;
 
 class MenuItem
 {
-sdf	vec3 size;
-}
+  vec3 size;
+};
