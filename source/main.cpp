@@ -13,7 +13,7 @@ static int windowId;
 
 void onRender()
 {
-    RenshiApp::getInstance().onRender();
+  RenshiApp::getInstance().onRender();
 }
 
 void onKeyPressed(unsigned char key, int x, int y)
@@ -21,15 +21,25 @@ void onKeyPressed(unsigned char key, int x, int y)
 	RenshiApp::getInstance().onKeyPressed(key, x, y);
 }
 
+void onSpecialKeyPressed(int key, int x, int y)
+{
+	RenshiApp::getInstance().onSpecialKeyPressed(key, x, y);
+}
+
 int main(int argc, char** argv)
 {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE);
-    glutInitWindowSize(500,500);
-    glutInitWindowPosition(100,100);
-	glutEnterGameMode();
-    glutKeyboardFunc(onKeyPressed);
+  // Setup GLUT window
+  glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE);
+	glutInitWindowSize(500,500);
+  glutInitWindowPosition(100,100);
+  glutEnterGameMode();
+
+  // Setup GLUT callback methods for the main window
+  glutKeyboardFunc(onKeyPressed);
+  glutSpecialFunc(onSpecialKeyPressed);
 	glutDisplayFunc(onRender);
-    glutMainLoop();    
-    return 0;
+
+  glutMainLoop();
+  return 0;
 }

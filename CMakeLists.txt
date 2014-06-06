@@ -1,6 +1,11 @@
 cmake_minimum_required (VERSION 2.6)
 project (renshi)
 
+# Compiler flags
+SET(C11_COMPILE_FLAGS "-std=c++11")
+SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${C11_COMPILE_FLAGS}" )
+
+
 # Get a list of source files.  Touch this file if you add more files and have already ran CMake.
 file(GLOB_RECURSE source_files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp ${CMAKE_CURRENT_SOURCE_DIR}/source/*.h)
 
