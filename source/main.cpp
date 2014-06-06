@@ -33,7 +33,9 @@ int main(int argc, char** argv)
 	glutInitDisplayMode(GLUT_DOUBLE);
 	glutInitWindowSize(500,500);
  	glutInitWindowPosition(100,100);
-	glutEnterGameMode();
+	windowId = glutEnterGameMode();
+	
+	Application::getInstance().initialize();
 	
   	// Setup GLUT callback methods for the main window
 	glutKeyboardFunc(onKeyPressed);
