@@ -7,23 +7,23 @@
 #endif
 
 #include <cstdlib>
-#include "RenshiApp.h"
+#include "Application.h"
 
 static int windowId;
 
 void onRender()
 {
-  RenshiApp::getInstance().onRender();
+  Application::getInstance().onRender();
 }
 
 void onKeyPressed(unsigned char key, int x, int y)
 {
-	RenshiApp::getInstance().onKeyPressed(key, x, y);
+	Application::getInstance().onKeyPressed(key, x, y);
 }
 
 void onSpecialKeyPressed(int key, int x, int y)
 {
-	RenshiApp::getInstance().onSpecialKeyPressed(key, x, y);
+	Application::getInstance().onSpecialKeyPressed(key, x, y);
 }
 
 int main(int argc, char** argv)

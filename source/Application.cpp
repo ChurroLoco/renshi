@@ -1,4 +1,4 @@
-#include "RenshiApp.h"
+#include "Application.h"
 #include <iostream>
 
 #ifdef __APPLE__
@@ -11,24 +11,24 @@
 
 using namespace std;
 
-RenshiApp& RenshiApp::getInstance()
+Application& Application::getInstance()
 {
-	static RenshiApp instance;
+	static Application instance;
 	return instance;
 }
 
-RenshiApp::RenshiApp()
+Application::Application()
 {
-	cout << "Creating RenshiApp instance...\n";
+	cout << "Creating Application instance...\n";
 	this->m_cameraPosX = 0.0f;
 }
 
-RenshiApp::~RenshiApp()
+Application::~Application()
 {
-	cout << "Destroying RenshiApp instance...\n";
+	cout << "Destroying Application instance...\n";
 }
 
-void RenshiApp::onRender()
+void Application::onRender()
 {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -44,7 +44,7 @@ void RenshiApp::onRender()
 	glutSwapBuffers();
 }
 
-void RenshiApp::onKeyPressed(unsigned char key, int x, int y)
+void Application::onKeyPressed(unsigned char key, int x, int y)
 {
 	switch (key)
 	{
@@ -54,7 +54,7 @@ void RenshiApp::onKeyPressed(unsigned char key, int x, int y)
 	}
 }
 
-void RenshiApp::onSpecialKeyPressed(int key, int x, int y)
+void Application::onSpecialKeyPressed(int key, int x, int y)
 {
 	switch (key)
 	{
