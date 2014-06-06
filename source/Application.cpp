@@ -28,7 +28,7 @@ Application::~Application()
 	cout << "Destroying Application instance...\n";
 }
 
-bool Application::getInitialized()
+bool Application::getInitialized() const
 {
 	return this->m_isInitialized;
 }
