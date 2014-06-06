@@ -5,8 +5,14 @@
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
+
 # Unix Make File Artifacts
 Makefile
+
+# xCode artifacts
+CMakeScripts/
+*.build/
+*.xcodeproj/
 
 # Build Artifacts
 build/
