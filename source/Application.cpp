@@ -28,6 +28,16 @@ Application::~Application()
 	cout << "Destroying Application instance...\n";
 }
 
+bool Application::getInitialized()
+{
+	return this->m_isInitialized;
+}
+
+void Application::initialize()
+{
+	this->m_isInitialized = true;
+}
+
 void Application::onRender()
 {
 	glClearColor(0.0, 0.0, 0.0, 0.0);

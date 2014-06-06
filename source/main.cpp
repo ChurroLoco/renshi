@@ -28,18 +28,18 @@ void onSpecialKeyPressed(int key, int x, int y)
 
 int main(int argc, char** argv)
 {
-  // Setup GLUT window
-  glutInit(&argc, argv);
+ 	// Setup GLUT window
+	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE);
 	glutInitWindowSize(500,500);
-  glutInitWindowPosition(100,100);
-  glutEnterGameMode();
-
-  // Setup GLUT callback methods for the main window
-  glutKeyboardFunc(onKeyPressed);
-  glutSpecialFunc(onSpecialKeyPressed);
+ 	glutInitWindowPosition(100,100);
+	glutEnterGameMode();
+	
+  	// Setup GLUT callback methods for the main window
+	glutKeyboardFunc(onKeyPressed);
+	glutSpecialFunc(onSpecialKeyPressed);
 	glutDisplayFunc(onRender);
-
-  glutMainLoop();
-  return 0;
+	glutIgnoreKeyRepeat(true);
+	glutMainLoop();
+	return 0;
 }
